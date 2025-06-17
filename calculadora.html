@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Calculadora Solar 🌞</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f8f5;
+      padding: 20px;
+      max-width: 700px;
+      margin: auto;
+    }
+    h1 {
+      text-align: center;
+      color: #2c7a4b;
+    }
+    label {
+      display: block;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+    input {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+    }
+    button {
+      margin-top: 15px;
+      background-color: #2c7a4b;
+      color: white;
+      padding: 10px;
+      border: none;
+      width: 100%;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    .result {
+      margin-top: 20px;
+      background-color: #e4f5e9;
+      padding: 15px;
+      border-radius: 5px;
+    }
+    .important {
+      color: #0e5e3c;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Calculadora S O L A R Y🌞</h1>
+
+  <label for="consumo">🔌 Consumo mensual estimado (kWh)</label>
+  <input type="number" id="consumo" placeholder="Ej: 300">
+
+  <label for="monthlyCost">💡 ¿Cuánto pagas actualmente al mes en energía? (COP)</label>
+  <input type="number" id="monthlyCost" placeholder="Ej: 250000">
+
+  <label for="solarCost">☀️ ¿Cuánto pagarías al mes con energía solar? (COP)</label>
+  <input type="number" id="solarCost" placeholder="Ej: 130000">
+
+  <label for="installationCost">🏗️ Costo de instalación del sistema solar (COP)</label>
+  <input type="number" id="installationCost" placeholder="Ej: 16000000">
+
+  <label for="years">📅 ¿Durante cuántos años quieres calcular tu ahorro?</label>
+  <input type="number" id="years" placeholder="Ej: 10">
+
+  <button onclick="calculateSavings()">Calcular</button>
+
+  <div class="result" id="result" style="display:none;">
+    <p>🔋 <strong>Consumo mensual:</strong> <span id="consumoSpan"></span> kWh</p>
+    <p>💰 <strong>Ahorro mensual estimado:</strong> <span id="monthlySavings"></span> COP</p>
+    <p>📈 <strong>Ahorro total en <span id="yearsSpan"></span> años:</strong> <span id="totalSavings"></span> COP</p>
+    <p>🏗️ <strong>Inversión inicial en paneles solares:</strong> <span id="installationCostSpan"></span> COP</p>
+    <p class="important">📊 <strong>Ganancia neta después de <span id="yearsSpan2"></span> años:</strong> <span id="netProfit"></span> COP</p>
+  </div>
+
+  <script>
+    function calculateSavings() {
+      const consumo = parseFloat(document.getElementById("consumo").value);
+      const monthlyCost = parseFloat(document.getElementById("monthlyCost").value);
+      const solarCost = parseFloat(document.getElementById("solarCost").value);
+      const installationCost = parseFloat(document.getElementById("installationCost").value);
+      const years = parseInt(document.getElementById("years").value);
+
+      if (
+        isNaN(consumo) || isNaN(monthlyCost) || isNaN(solarCost) ||
+        isNaN(installationCost) || isNaN(years)
+      ) {
+        alert("Por favor, completa todos los campos.");
+        return;
+      }
+
+      // Ahorro mensual sin considerar la inversión inicial
+      const monthlySavings = monthlyCost - solarCost;
+
+      // Ahorro total en el periodo seleccionado
+      const totalSavings = monthlySavings * 12 * years;
+
+      // Ganancia neta después de recuperar la inversión
+      const netProfit = totalSavings - installationCost;
+
+      // Mostrar resultados en pantalla
+      document.getElementById("consumoSpan").textContent = consumo.toLocaleString();
+      document.getElementById("monthlySavings").textContent = monthlySavings.toLocaleString();
+      document.getElementById("totalSavings").textContent = totalSavings.toLocaleString();
+      document.getElementById("installationCostSpan").textContent = installationCost.toLocaleString();
+      document.getElementById("netProfit").textContent = netProfit.toLocaleString();
+      document.getElementById("yearsSpan").textContent = years;
+      document.getElementById("yearsSpan2").textContent = years;
+      document.getElementById("result").style.display = "block";
+    }
+  </script>
+
+</body>
+</html>
