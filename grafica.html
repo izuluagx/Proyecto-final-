@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Gráfica Energía Solar en Colombia 🌞</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 30px;
+      background-color: #f4f8f5;
+    }
+    h2 {
+      color: #2c7a4b;
+      text-align: center;
+    }
+    canvas {
+      max-width: 800px;
+      margin: 40px auto;
+      display: block;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body>
+
+  <h2>📈 Implementación de Energía Solar y Reducción de CO₂ en Colombia (2018 - 2025)</h2>
+  <canvas id="solarChart" width="1500" height="1100"></canvas>
+
+  <script>
+    const ctx = document.getElementById('solarChart').getContext('2d');
+
+    const data = {
+      labels: [2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025],
+      datasets: [
+        {
+          label: 'Capacidad solar instalada (MW)',
+          data: [28, 100, 400, 700, 1625, 1348, 1871, 2047],
+          borderColor: '#f39c12',
+          backgroundColor: '#f39c1266',
+          yAxisID: 'y1',
+          tension: 0.4,
+          fill: true
+        },
+        {
+          label: 'CO₂ evitado (toneladas por año)',
+          data: [0, 50000, 120000, 247845, 400000, 350000, 500000, 550000],
+          borderColor: '#27ae60',
+          backgroundColor: '#27ae6066',
+          yAxisID: 'y2',
+          tension: 0.4,
+          fill: true
+        }
+      ]
+    };
+
+    const config = {
+      type: 'line',
+      data: data,
+      options: {
+        responsive: true,
+        plugins: {
+          legend: { position: 'top' },
+          title: {
+            display: false,
+            text: 'Energía Solar y CO₂ Evitado'
+          }
+        },
+        scales: {
+          y1: {
+            type: 'linear',
+            position: 'left',
+            title: { display: true, text: 'Capacidad (MW)' },
+            beginAtZero: true
+          },
+          y2: {
+            type: 'linear',
+            position: 'right',
+            title: { display: true, text: 'CO₂ evitado (t/año)' },
+            beginAtZero: true,
+            grid: { drawOnChartArea: false }
+          }
+        }
+      }
+    };
+
+    new Chart(ctx, config);
+  </script>
+
+</body>
+</html>
