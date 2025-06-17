@@ -30,7 +30,7 @@ body {
 .header .container {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: righ;
 }
 
 .logo {
@@ -43,8 +43,8 @@ body {
 }
 
 .logo img {
-    height: 40px; /* Adjust logo size */
-    margin-right: 10px;
+    height: 90px; /* Adjust logo size */
+    margin-right: 50px;
 }
 
 .navbar ul {
