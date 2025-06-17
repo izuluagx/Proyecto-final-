@@ -1,0 +1,237 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif; /* A more neutral font for body */
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header Styling */
+.header {
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black, adjust as needed */
+    color: #fff;
+    padding: 15px 0;
+    position: absolute; /* To overlay on the hero section */
+    width: 100%;
+    z-index: 1000;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif; /* For the logo text */
+    font-weight: 700;
+    font-size: 24px;
+    color: #8bc34a; /* Greenyellow brand color */
+}
+
+.logo img {
+    height: 40px; /* Adjust logo size */
+    margin-right: 10px;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+}
+
+.navbar ul li {
+    margin-left: 25px;
+}
+
+.navbar ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 15px;
+    transition: color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+    color: #8bc34a; /* Hover color */
+}
+
+.search-icon img {
+    height: 20px; /* Adjust search icon size */
+    cursor: pointer;
+    filter: invert(1); /* To make it white if it's a black icon */
+}
+
+/* Hero Section Styling */
+.hero-section {
+    position: relative;
+    height: 100vh; /* Full viewport height */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+}
+
+.hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1; /* Send to back */
+}
+
+.hero-background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cover the entire area */
+    filter: brightness(0.5); /* Darken the image to make text more readable */
+}
+
+.hero-content {
+    position: relative; /* Bring content to front */
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left; /* Align text to the left as in the image */
+    padding-left: 100px; /* Adjust as needed to position content */
+    align-self: flex-start; /* Align content to the start of the cross axis (top for column) */
+    margin-top: 20vh; /* Push content down from the top */
+}
+
+.icon-bulb {
+    border: 2px solid white;
+    border-radius: 50%;
+    padding: 20px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.icon-bulb svg {
+    width: 50px;
+    height: 50px;
+    color: #8bc34a; /* Greenyellow color for the bulb */
+    stroke-width: 1.5;
+}
+
+.hero-content h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 60px;
+    margin-bottom: 30px;
+    max-width: 600px; /* Control line breaks */
+    line-height: 1.1;
+    text-align: left;
+    font-weight: 700;
+}
+
+.btn-primary {
+    display: inline-block;
+    background-color: #8bc34a; /* Greenyellow button color */
+    color: #fff;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 700;
+    transition: background-color 0.3s ease;
+    align-self: flex-start; /* Align button to the left */
+}
+
+.btn-primary:hover {
+    background-color: #689f38; /* Darker green on hover */
+}
+
+/* You'll need to replace 'path/to/your/logo.png', 'path/to/your/search-icon.png', and 'path/to/your/background-image.jpg' with the actual paths to your image files. */
+
+/* Media Queries for Responsiveness (Basic Example) */
+@media (max-width: 992px) {
+    .navbar ul li {
+        margin-left: 15px;
+    }
+
+    .hero-content h1 {
+        font-size: 48px;
+    }
+}
+
+@media (max-width: 768px) {
+    .header .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .navbar ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    .navbar ul li {
+        margin: 5px 10px;
+    }
+
+    .hero-content {
+        padding-left: 20px;
+        align-items: center;
+        text-align: center;
+        margin-top: 15vh;
+    }
+
+    .hero-content h1 {
+        font-size: 38px;
+        max-width: 90%;
+    }
+
+    .btn-primary {
+        align-self: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        font-size: 20px;
+    }
+
+    .logo img {
+        height: 30px;
+    }
+
+    .navbar ul li a {
+        font-size: 13px;
+    }
+
+    .hero-content h1 {
+        font-size: 30px;
+    }
+
+    .icon-bulb {
+        padding: 15px;
+    }
+
+    .icon-bulb svg {
+        width: 40px;
+        height: 40px;
+    }
+
+    .btn-primary {
+        padding: 12px 25px;
+        font-size: 14px;
+    }
+}
