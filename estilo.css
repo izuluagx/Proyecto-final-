@@ -235,3 +235,107 @@ body {
         font-size: 14px;
     }
 }
+.contact-section {
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.contact-section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+form label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #007b5e;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #005f46;
+}
+
+/* ===== Footer Solary ===== */
+.footer {
+  background-color: #689f38; 
+  color: #ffffff;
+  padding: 40px 20px 20px;
+  height: 40vh;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-info, .footer-contact, .footer-links {
+  flex: 1 1 250px;
+}
+
+.footer h3, .footer h4 {
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.footer p, .footer a {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #e1f1e6;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+  color: #c0e6cf;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 2px;
+  line-height: 2;
+  height: 15px;
+  
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 13px;
+  border-top: 1px solid #3b8c60;
+  padding-top: 15px;
+  color: #d0f5e0;
+}
+
+

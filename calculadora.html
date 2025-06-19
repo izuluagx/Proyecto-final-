@@ -77,41 +77,42 @@
   </div>
 
   <script>
-    function calculateSavings() {
-      const consumo = parseFloat(document.getElementById("consumo").value);
-      const monthlyCost = parseFloat(document.getElementById("monthlyCost").value);
-      const solarCost = parseFloat(document.getElementById("solarCost").value);
-      const installationCost = parseFloat(document.getElementById("installationCost").value);
-      const years = parseInt(document.getElementById("years").value);
+    
+  function calculateSavings() {
+    const consumo = parseFloat(document.getElementById("consumo").value);
+    const monthlyCost = parseFloat(document.getElementById("monthlyCost").value);
+    const solarCost = parseFloat(document.getElementById("solarCost").value);
+    const installationCost = parseFloat(document.getElementById("installationCost").value);
+    const years = parseInt(document.getElementById("years").value);
 
-      if (
-        isNaN(consumo) || isNaN(monthlyCost) || isNaN(solarCost) ||
-        isNaN(installationCost) || isNaN(years)
-      ) {
-        alert("Por favor, completa todos los campos.");
-        return;
-      }
-
-      // Ahorro mensual sin considerar la inversión inicial
-      const monthlySavings = monthlyCost - solarCost;
-
-      // Ahorro total en el periodo seleccionado
-      const totalSavings = monthlySavings * 12 * years;
-
-      // Ganancia neta después de recuperar la inversión
-      const netProfit = totalSavings - installationCost;
-
-      // Mostrar resultados en pantalla
-      document.getElementById("consumoSpan").textContent = consumo.toLocaleString();
-      document.getElementById("monthlySavings").textContent = monthlySavings.toLocaleString();
-      document.getElementById("totalSavings").textContent = totalSavings.toLocaleString();
-      document.getElementById("installationCostSpan").textContent = installationCost.toLocaleString();
-      document.getElementById("netProfit").textContent = netProfit.toLocaleString();
-      document.getElementById("yearsSpan").textContent = years;
-      document.getElementById("yearsSpan2").textContent = years;
-      document.getElementById("result").style.display = "block";
+    if (
+      isNaN(consumo) || isNaN(monthlyCost) || isNaN(solarCost) ||
+      isNaN(installationCost) || isNaN(years)
+    ) {
+      alert("Por favor, completa todos los campos.");
+      return;
     }
-  </script>
+
+    const monthlySavings = monthlyCost - solarCost;
+    const totalSavings = monthlySavings * 12 * years;
+    const netProfit = totalSavings - installationCost;
+
+    document.getElementById("consumoSpan").textContent = consumo.toLocaleString();
+    document.getElementById("monthlySavings").textContent = monthlySavings.toLocaleString();
+    document.getElementById("totalSavings").textContent = totalSavings.toLocaleString();
+    document.getElementById("installationCostSpan").textContent = installationCost.toLocaleString();
+    document.getElementById("netProfit").textContent = netProfit.toLocaleString();
+    document.getElementById("yearsSpan").textContent = years;
+    document.getElementById("yearsSpan2").textContent = years;
+    document.getElementById("result").style.display = "block";
+
+    // Esperar 5 segundos y redirigir al inicio
+    setTimeout(function () {
+      alert("Gracias por usar la calculadora. Serás redirigido a la página de inicio.");
+      window.location.href = "index.html";
+    }, 5000);
+  }
+</script>
 
 </body>
 </html>

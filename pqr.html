@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Formulario PQR - Solary</title>
+  <style>
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background-color: #f1f5f3;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .form-container {
+      background-color: #ffffff;
+      padding: 30px 40px;
+      border-radius: 10px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+      max-width: 600px;
+      width: 100%;
+    }
+
+    .form-container h2 {
+      text-align: center;
+      color: #2c7a4b;
+      margin-bottom: 25px;
+    }
+
+    label {
+      font-weight: bold;
+      display: block;
+      margin-top: 15px;
+      color: #333;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="file"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+
+    textarea {
+      resize: vertical;
+    }
+
+    input[type="checkbox"] {
+      margin-right: 10px;
+    }
+
+    button {
+      background-color: #2c7a4b;
+      color: white;
+      border: none;
+      padding: 12px;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 20px;
+      width: 100%;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #25693e;
+    }
+
+    a {
+      color: #2c7a4b;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="form-container">
+    <form id="formPQR" action="#" method="GET" enctype="multipart/form-data">
+      <h2>Formulario de PQR</h2>
+
+      <label for="nombre">Nombre completo:</label>
+      <input type="text" id="nombre" name="nombre" required>
+
+      <label for="tipo_documento">Tipo de documento:</label>
+      <select id="tipo_documento" name="tipo_documento" required>
+        <option value="">Seleccione</option>
+        <option value="CC">Cédula de ciudadanía</option>
+        <option value="TI">Tarjeta de identidad</option>
+        <option value="NIT">NIT</option>
+        <option value="Pasaporte">Pasaporte</option>
+      </select>
+
+      <label for="numero_documento">Número de documento:</label>
+      <input type="text" id="numero_documento" name="numero_documento" required>
+
+      <label for="correo">Correo electrónico:</label>
+      <input type="email" id="correo" name="correo" required>
+
+      <label for="telefono">Teléfono de contacto:</label>
+      <input type="tel" id="telefono" name="telefono" required>
+
+      <label for="tipo_solicitud">Tipo de solicitud:</label>
+      <select id="tipo_solicitud" name="tipo_solicitud" required>
+        <option value="">Seleccione</option>
+        <option value="Petición">Petición</option>
+        <option value="Queja">Queja</option>
+        <option value="Reclamo">Reclamo</option>
+        <option value="Sugerencia">Sugerencia</option>
+        <option value="Felicitación">Felicitación</option>
+      </select>
+
+      <label for="asunto">Asunto:</label>
+      <input type="text" id="asunto" name="asunto" required>
+
+      <label for="descripcion">Descripción detallada:</label>
+      <textarea id="descripcion" name="descripcion" rows="5" required></textarea>
+
+      <label for="archivo">Adjuntar archivo (opcional):</label>
+      <input type="file" id="archivo" name="archivo">
+
+      <label>
+        <input type="checkbox" name="autorizacion" required>
+        Acepto el tratamiento de mis datos personales según la 
+        <a href="/politica-privacidad" target="_blank">política de privacidad</a>.
+      </label>
+
+      <button type="submit">Enviar solicitud</button>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById("formPQR").addEventListener("submit", function(e) {
+      e.preventDefault();
+      alert("Tu solicitud ha sido registrada con éxito.");
+      window.location.href = "index.html";
+    });
+  </script>
+
+</body>
+</html>
