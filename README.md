@@ -40,7 +40,6 @@ Brindar a los usuarios una plataforma sencilla pero poderosa que:
 solary/
 ├── index.html
 ├── estilo.css
-├── script.js (si aplica)
 ├── imagenesproyecto/
 │   ├── solar.png
 │   └── ...
