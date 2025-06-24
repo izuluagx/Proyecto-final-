@@ -68,9 +68,9 @@ solary/
 
 ---
 
-## 🙋‍♀️ Autora
+## 🙋‍♀️ Autoras
 
-Este proyecto fue desarrollado por **Isabela Zuluaga,Karen Lorena Indabur,Januarys Giraldo**, jovenes apasionada por la tecnología, la sostenibilidad y el poder de la educación digital para transformar comunidades. 💻🌞
+Este proyecto fue desarrollado por **Isabela Zuluaga, Karen Lorena Indabur, Januarys Giraldo** jovenes apasionada por la tecnología, la sostenibilidad y el poder de la educación digital para transformar comunidades. 💻🌞
 
 ---
 
