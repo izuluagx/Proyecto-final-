@@ -3,14 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Contáctanos - Solary</title>
+  <title>Quiénes Somos - Solary</title>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet"/>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet"/>
-  <!-- Fuentes -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
-  
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet"/>
+
   <style>
     * {
       margin: 0;
@@ -18,20 +15,18 @@
       box-sizing: border-box;
     }
 
-    html {
-      scroll-behavior: smooth;
-    }
-
     body {
       font-family: 'Open Sans', sans-serif;
-      background-image: url(imgEsolar/diasoleado.jpg);
+      background-image: url('imgEsolar/diasoleado.jpg');
       background-size: cover;
-      background-position: center;
       background-attachment: fixed;
       color: #333;
     }
 
-    /* ===== HEADER / MENÚ ===== */
+    html {
+      scroll-behavior: smooth;
+    }
+
     .header {
       background-color: rgba(0, 0, 0, 0.6);
       color: #fff;
@@ -74,7 +69,6 @@
       color: #fff;
       text-decoration: none;
       font-size: 15px;
-      font-weight: 400;
       transition: color 0.3s ease;
     }
 
@@ -82,67 +76,38 @@
       color: #8bc34a;
     }
 
-    /* ===== FORMULARIO PQRS ===== */
-    .form-container {
-      max-width: 700px;
+    .content {
+      max-width: 1000px;
       margin: 140px auto 60px;
-      background-color: rgba(255, 255, 255, 0.95);
-      padding: 30px;
+      background-color: rgba(255, 255, 255, 0.96);
+      padding: 40px;
       border-radius: 10px;
-      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
     }
 
-    .form-container h2 {
-      text-align: center;
+    .content h1 {
       font-family: 'Montserrat', sans-serif;
-      margin-bottom: 20px;
       color: #2c7a4b;
+      margin-bottom: 20px;
+      text-align: center;
     }
 
-    form label {
-      display: block;
-      margin: 10px 0 5px;
-      font-weight: 600;
+    .content h2 {
+      margin-top: 30px;
+      color: #689f38;
+      font-family: 'Montserrat', sans-serif;
     }
 
-    form input, form select, form textarea {
-      width: 100%;
-      padding: 10px;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-      margin-bottom: 15px;
-      font-family: 'Open Sans', sans-serif;
-    }
-
-    form input[type="checkbox"] {
-      width: auto;
-      margin-right: 10px;
-    }
-
-    form button {
-      display: block;
-      width: 100%;
-      padding: 12px;
-      background-color: #8bc34a;
-      color: white;
-      border: none;
-      border-radius: 6px;
-      font-weight: bold;
+    .content p {
+      margin-top: 10px;
+      line-height: 1.7;
       font-size: 16px;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
     }
 
-    form button:hover {
-      background-color: #689f38;
-    }
-
-    /* ===== FOOTER ===== */
     .footer {
       background-color: #689f38;
       color: #ffffff;
       padding: 40px 20px 20px;
-      font-family: 'Open Sans', sans-serif;
     }
 
     .footer-container {
@@ -152,10 +117,6 @@
       flex-wrap: wrap;
       gap: 30px;
       justify-content: space-between;
-    }
-
-    .footer-info, .footer-contact, .footer-links {
-      flex: 1 1 250px;
     }
 
     .footer h3, .footer h4 {
@@ -172,7 +133,6 @@
 
     .footer a:hover {
       text-decoration: underline;
-      color: #c0e6cf;
     }
 
     .footer-links ul {
@@ -190,7 +150,6 @@
       font-size: 13px;
       border-top: 1px solid #3b8c60;
       padding-top: 15px;
-      color: #d0f5e0;
     }
 
     @media (max-width: 768px) {
@@ -204,7 +163,7 @@
         justify-content: center;
       }
 
-      .form-container {
+      .content {
         margin: 160px 20px 60px;
       }
     }
@@ -212,7 +171,7 @@
 </head>
 
 <body>
-  <!-- ===== MENÚ SUPERIOR ===== -->
+  <!-- Header -->
   <header class="header">
     <div class="header-container">
       <div class="logo">
@@ -222,7 +181,7 @@
       <nav class="navbar">
         <ul>
           <li><a href="index.html">Inicio</a></li>
-          <li><a href="#">Quienes Somos</a></li>
+          <li><a href="quienes.html">Quienes Somos</a></li>
           <li><a href="contacto.html">Contáctanos</a></li>
           <li><a href="pqr.html">PQRS</a></li>
         </ul>
@@ -230,28 +189,34 @@
     </div>
   </header>
 
-  <!-- Contact Section -->
-<main>
-  <div class="form-container">
-    <h2>Contáctanos</h2>
-    <form id="contactForm">
-      <label for="nombre">Nombre:</label>
-      <input type="text" id="nombre" name="nombre" required>
+  <!-- Main Content -->
+  <main class="content">
+    <h1>¿Quiénes Somos?</h1>
 
-      <label for="email">Correo Electrónico:</label>
-      <input type="email" id="email" name="email" required>
+    <p>En  S O L A R Y, nos dedicamos a ser tu fuente de información confiable y actualizada sobre la energía solar en Colombia. Nuestro objetivo es democratizar el conocimiento sobre esta importante alternativa energética, haciendo que temas complejos sean accesibles para todos.</p>
 
-      <label for="asunto">Asunto:</label>
-      <input type="text" id="asunto" name="asunto" required>
+    <h2>Nuestra Historia</h2>
+    <p>La energía solar se ha convertido en una alternativa viable para la generación de electricidad a partir de fuentes renovables, permitiendo a la humanidad reducir la dependencia de los combustibles fósiles y mitigar su impacto ambiental. Este proyecto tiene como objetivo general brindar información clara y accesible sobre sus beneficios, funcionamiento y aplicaciones prácticas.</p>
 
-      <label for="mensaje">Mensaje:</label>
-      <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+    <h2>Misión</h2>
+    <p>Proveer información precisa, imparcial y de fácil comprensión sobre los principios, aplicaciones, beneficios y regulaciones de la energía solar en el contexto colombiano, empoderando a nuestros visitantes para tomar decisiones informadas.</p>
 
-      <button type="submit">Enviar</button>
-    </form>
-  </div>
-</main>
+    <h2>Visión</h2>
+    <p>Convertirnos en el recurso de referencia principal para cualquier persona interesada en la energía solar en Colombia, contribuyendo al crecimiento de su adopción a través de la educación y la divulgación.</p>
 
+    <h2>Valores</h2>
+    <p>Precisión, Claridad, Imparcialidad,y Trabajo en Equipo.</p>
+
+    <h2>Conóce el avance de los proyectos en Colombia</h2>
+    <div style="max-width: 700px; margin: 20px auto; text-align: center;">
+  <iframe width="100%" height="400" src="https://www.youtube.com/embed/O_ra9TdiBxc?si=5aMXPpbD8NJZp2dh"
+    title="YouTube video player" frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+  </iframe>
+</div>
+
+  </main>
 
   <!-- Footer -->
   <footer class="footer">
@@ -270,7 +235,7 @@
         <h4>Enlaces rápidos</h4>
         <ul>
           <li><a href="index.html">Inicio</a></li>
-          <li><a href="#">Proyectos</a></li>
+          <li><a href="quienes.html">Quiénes Somos</a></li>
           <li><a href="contacto.html">Contáctanos</a></li>
           <li><a href="pqr.html">PQRS</a></li>
         </ul>
@@ -280,14 +245,5 @@
       <p>&copy; 2025 Solary. Todos los derechos reservados.</p>
     </div>
   </footer>
-
-  <!-- Script -->
-  <script>
-    document.getElementById("contactForm").addEventListener("submit", function(e) {
-      e.preventDefault();
-      alert("Gracias por contactarnos. Serás redirigido a la página de inicio.");
-      window.location.href = "index.html";
-    });
-  </script>
 </body>
 </html>

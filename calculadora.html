@@ -1,118 +1,299 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Calculadora Solar 🌞</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calculadora Solary</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet" />
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #f4f8f5;
-      padding: 20px;
-      max-width: 700px;
-      margin: auto;
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
-    h1 {
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background-image: url('imgEsolar/diasoleado.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      color: #333;
+    }
+
+    .header {
+      background-color: rgba(0, 0, 0, 0.6);
+      color: #fff;
+      padding: 10px 20px;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+    }
+
+    .container1 {
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo img {
+      height: 60px;
+    }
+
+    .navbar ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    .navbar a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 400;
+      transition: color 0.3s ease;
+    }
+
+    .navbar a:hover {
+      color: #8bc34a;
+    }
+
+    .calculadora-container {
+      max-width: 700px;
+      margin: 140px auto 40px auto;
+      background: rgba(255, 255, 255, 0.95);
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    }
+
+    .calculadora-container h1 {
       text-align: center;
       color: #2c7a4b;
+      margin-bottom: 30px;
+      font-family: 'Montserrat', sans-serif;
     }
+
     label {
       display: block;
-      margin-top: 10px;
+      margin-top: 20px;
       font-weight: bold;
+      color: #333;
     }
+
     input {
       width: 100%;
-      padding: 8px;
-      margin-top: 5px;
+      padding: 10px;
+      margin-top: 8px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
     }
+
     button {
-      margin-top: 15px;
+      margin-top: 25px;
       background-color: #2c7a4b;
       color: white;
-      padding: 10px;
+      padding: 12px;
       border: none;
       width: 100%;
       font-size: 16px;
+      border-radius: 5px;
       cursor: pointer;
     }
+
+    button:hover {
+      background-color: #24703c;
+    }
+
     .result {
-      margin-top: 20px;
+      margin-top: 30px;
       background-color: #e4f5e9;
       padding: 15px;
       border-radius: 5px;
+      color: #0e5e3c;
     }
+
     .important {
       color: #0e5e3c;
       font-weight: bold;
     }
+
+    .footer {
+      background-color: #689f38;
+      color: #ffffff;
+      padding: 40px 20px 20px;
+      font-family: 'Open Sans', sans-serif;
+    }
+
+    .footer-container {
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: space-between;
+    }
+
+    .footer-info, .footer-contact, .footer-links {
+      flex: 1 1 250px;
+    }
+
+    .footer h3, .footer h4 {
+      margin-bottom: 10px;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    .footer p, .footer a {
+      font-size: 14px;
+      line-height: 1.6;
+      color: #e1f1e6;
+      text-decoration: none;
+    }
+
+    .footer a:hover {
+      text-decoration: underline;
+      color: #c0e6cf;
+    }
+
+    .footer-links ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .footer-links li {
+      margin-bottom: 5px;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      margin-top: 30px;
+      font-size: 13px;
+      border-top: 1px solid #3b8c60;
+      padding-top: 15px;
+      color: #d0f5e0;
+    }
   </style>
 </head>
 <body>
+  <header class="header">
+    <div class="container1">
+      <div class="logo">
+        <img src="imgEsolar/LogoSoralysinFondo.png" alt="Logo Solary" />
+      </div>
+      <nav class="navbar">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="quienessomos.html">Quienes Somos</a></li>
+          <li><a href="contacto.html">Contáctanos</a></li>
+          <li><a href="pqr.html">PQRS</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-  <h1>Calculadora S O L A R Y🌞</h1>
+  <main class="calculadora-container">
+    <h1>Calculadora S O L A R Y 🌞</h1>
 
-  <label for="consumo">🔌 Consumo mensual estimado (kWh)</label>
-  <input type="number" id="consumo" placeholder="Ej: 300">
+    <label for="consumo">🔌 Consumo mensual estimado (kWh)</label>
+    <input type="number" id="consumo" placeholder="Ej: 300" />
 
-  <label for="monthlyCost">💡 ¿Cuánto pagas actualmente al mes en energía? (COP)</label>
-  <input type="number" id="monthlyCost" placeholder="Ej: 250000">
+    <label for="monthlyCost">💡 ¿Cuánto pagas actualmente al mes en energía? (COP)</label>
+    <input type="number" id="monthlyCost" placeholder="Ej: 250000" />
 
-  <label for="solarCost">☀️ ¿Cuánto pagarías al mes con energía solar? (COP)</label>
-  <input type="number" id="solarCost" placeholder="Ej: 130000">
+    <label for="solarCost">☀️ ¿Cuánto pagarías al mes con energía solar? (COP)</label>
+    <input type="number" id="solarCost" placeholder="Ej: 130000" />
 
-  <label for="installationCost">🏗️ Costo de instalación del sistema solar (COP)</label>
-  <input type="number" id="installationCost" placeholder="Ej: 16000000">
+    <label for="installationCost">🏧 Costo de instalación del sistema solar (COP)</label>
+    <input type="number" id="installationCost" placeholder="Ej: 16000000" />
 
-  <label for="years">📅 ¿Durante cuántos años quieres calcular tu ahorro?</label>
-  <input type="number" id="years" placeholder="Ej: 10">
+    <label for="years">🗓️ ¿Durante cuántos años quieres calcular tu ahorro?</label>
+    <input type="number" id="years" placeholder="Ej: 10" />
 
-  <button onclick="calculateSavings()">Calcular</button>
+    <button onclick="calculateSavings()">Calcular</button>
 
-  <div class="result" id="result" style="display:none;">
-    <p>🔋 <strong>Consumo mensual:</strong> <span id="consumoSpan"></span> kWh</p>
-    <p>💰 <strong>Ahorro mensual estimado:</strong> <span id="monthlySavings"></span> COP</p>
-    <p>📈 <strong>Ahorro total en <span id="yearsSpan"></span> años:</strong> <span id="totalSavings"></span> COP</p>
-    <p>🏗️ <strong>Inversión inicial en paneles solares:</strong> <span id="installationCostSpan"></span> COP</p>
-    <p class="important">📊 <strong>Ganancia neta después de <span id="yearsSpan2"></span> años:</strong> <span id="netProfit"></span> COP</p>
-  </div>
+    <div class="result" id="result" style="display: none">
+      <p>🔋 <strong>Consumo mensual:</strong> <span id="consumoSpan"></span> kWh</p>
+      <p>💰 <strong>Ahorro mensual estimado:</strong> <span id="monthlySavings"></span> COP</p>
+      <p>📈 <strong>Ahorro total en <span id="yearsSpan"></span> años:</strong> <span id="totalSavings"></span> COP</p>
+      <p>🏧 <strong>Inversión inicial en paneles solares:</strong> <span id="installationCostSpan"></span> COP</p>
+      <p class="important">📊 <strong>Ganancia neta después de <span id="yearsSpan2"></span> años:</strong> <span id="netProfit"></span> COP</p>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-info">
+        <h3>Solary</h3>
+        <p>Transformamos la energía del sol en un futuro sostenible para Medellín y Colombia.</p>
+      </div>
+
+      <div class="footer-contact">
+        <h4>Contacto</h4>
+        <p><strong>Dirección:</strong> Calle 50 #40-60, Medellín, Colombia</p>
+        <p><strong>Email:</strong> contacto@solary.com</p>
+        <p><strong>Teléfono:</strong> +57 300 123 4567</p>
+      </div>
+
+      <div class="footer-links">
+        <h4>Enlaces rápidos</h4>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="#">Proyectos</a></li>
+          <li><a href="contacto.html">Contáctanos</a></li>
+          <li><a href="pqr.html">PQRS</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2025 Solary. Todos los derechos reservados.</p>
+    </div>
+  </footer>
 
   <script>
-    
-  function calculateSavings() {
-    const consumo = parseFloat(document.getElementById("consumo").value);
-    const monthlyCost = parseFloat(document.getElementById("monthlyCost").value);
-    const solarCost = parseFloat(document.getElementById("solarCost").value);
-    const installationCost = parseFloat(document.getElementById("installationCost").value);
-    const years = parseInt(document.getElementById("years").value);
+    function calculateSavings() {
+      const consumo = parseFloat(document.getElementById("consumo").value);
+      const monthlyCost = parseFloat(document.getElementById("monthlyCost").value);
+      const solarCost = parseFloat(document.getElementById("solarCost").value);
+      const installationCost = parseFloat(document.getElementById("installationCost").value);
+      const years = parseInt(document.getElementById("years").value);
 
-    if (
-      isNaN(consumo) || isNaN(monthlyCost) || isNaN(solarCost) ||
-      isNaN(installationCost) || isNaN(years)
-    ) {
-      alert("Por favor, completa todos los campos.");
-      return;
+      if (
+        isNaN(consumo) || isNaN(monthlyCost) || isNaN(solarCost) ||
+        isNaN(installationCost) || isNaN(years)
+      ) {
+        alert("Por favor, completa todos los campos.");
+        return;
+      }
+
+      const monthlySavings = monthlyCost - solarCost;
+      const totalSavings = monthlySavings * 12 * years;
+      const netProfit = totalSavings - installationCost;
+
+      document.getElementById("consumoSpan").textContent = consumo.toLocaleString();
+      document.getElementById("monthlySavings").textContent = monthlySavings.toLocaleString();
+      document.getElementById("totalSavings").textContent = totalSavings.toLocaleString();
+      document.getElementById("installationCostSpan").textContent = installationCost.toLocaleString();
+      document.getElementById("netProfit").textContent = netProfit.toLocaleString();
+      document.getElementById("yearsSpan").textContent = years;
+      document.getElementById("yearsSpan2").textContent = years;
+      document.getElementById("result").style.display = "block";
+
+      setTimeout(function () {
+        alert("Gracias por usar la calculadora. Serás redirigido a la página de inicio.");
+        window.location.href = "index.html";
+      }, 5000);
     }
-
-    const monthlySavings = monthlyCost - solarCost;
-    const totalSavings = monthlySavings * 12 * years;
-    const netProfit = totalSavings - installationCost;
-
-    document.getElementById("consumoSpan").textContent = consumo.toLocaleString();
-    document.getElementById("monthlySavings").textContent = monthlySavings.toLocaleString();
-    document.getElementById("totalSavings").textContent = totalSavings.toLocaleString();
-    document.getElementById("installationCostSpan").textContent = installationCost.toLocaleString();
-    document.getElementById("netProfit").textContent = netProfit.toLocaleString();
-    document.getElementById("yearsSpan").textContent = years;
-    document.getElementById("yearsSpan2").textContent = years;
-    document.getElementById("result").style.display = "block";
-
-    // Esperar 5 segundos y redirigir al inicio
-    setTimeout(function () {
-      alert("Gracias por usar la calculadora. Serás redirigido a la página de inicio.");
-      window.location.href = "index.html";
-    }, 5000);
-  }
-</script>
-
+  </script>
 </body>
 </html>

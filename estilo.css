@@ -5,15 +5,12 @@
 }
 
 body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Open Sans', sans-serif; 
     line-height: 1.6;
-    color: #c8bbbb;
-    background-image: url('imagenesproyecto/solar.png'); /* Ajusta la ruta si es necesario */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    min-height: 100vh;
+    color: #ffffff;
+    background-color: #fff;
 }
+
 
 .container {
     max-width: 1200px;
@@ -25,7 +22,7 @@ body {
 .header {
     background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black, adjust as needed */
     color: #fff;
-    padding: 15px 0;
+    padding: 1px 0;
     position: absolute; /* To overlay on the hero section */
     width: 100%;
     z-index: 1000;
@@ -34,30 +31,40 @@ body {
 .header .container {
     display: flex;
     justify-content: space-between;
-    align-items: righ;
+    align-items: center;
 }
 
 .logo {
     display: flex;
     align-items: center;
-    font-family: 'Montserrat', sans-serif; /* For the logo text */
+    font-family: 'Montserrat', sans-serif; 
     font-weight: 700;
     font-size: 24px;
-    color: #8bc34a; /* Greenyellow brand color */
+    color: #8bc34a; 
 }
 
 .logo img {
-    height: 90px; /* Adjust logo size */
-    margin-right: 50px;
+    height: 100px; 
+    margin-right: 90px;
+}
+
+.navbar {
+    margin-right: 40px;  /* agrega espacio entre menú y borde */
 }
 
 .navbar ul {
     list-style: none;
     display: flex;
+    justify-content: flex-end;
 }
 
 .navbar ul li {
     margin-left: 25px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 15px;
+    transition: color 0.3s ease;
 }
 
 .navbar ul li a {
@@ -69,25 +76,24 @@ body {
 }
 
 .navbar ul li a:hover {
-    color: #8bc34a; /* Hover color */
+    color: #8bc34a; 
 }
 
 .search-icon img {
-    height: 20px; /* Adjust search icon size */
+    height: 20px; 
     cursor: pointer;
-    filter: invert(1); /* To make it white if it's a black icon */
+    filter: invert(1); 
 }
 
-/* Hero Section Styling */
+/* Hero Section  */
 .hero-section {
     position: relative;
-    height: 100vh; /* Full viewport height */
-    overflow: hidden;
+    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #fff;
     text-align: center;
+    overflow: hidden;
 }
 
 .hero-background {
@@ -97,26 +103,24 @@ body {
     width: 100%;
     height: 100%;
     overflow: hidden;
-    z-index: -1; /* Send to back */
+    z-index: -1;
 }
 
 .hero-background img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Cover the entire area */
-    filter: brightness(0.5); /* Darken the image to make text more readable */
+    object-fit: cover; 
+    filter: brightness(0.75); 
 }
 
 .hero-content {
-    position: relative; /* Bring content to front */
+    position: relative;
     z-index: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: left; /* Align text to the left as in the image */
-    padding-left: 100px; /* Adjust as needed to position content */
-    align-self: flex-start; /* Align content to the start of the cross axis (top for column) */
-    margin-top: 20vh; /* Push content down from the top */
+    max-width: 900px;
+    padding: 0 20px;
 }
 
 .icon-bulb {
@@ -136,21 +140,22 @@ body {
     stroke-width: 1.5;
 }
 
+
 .hero-content h1 {
     font-family: 'Montserrat', sans-serif;
     font-size: 60px;
-    margin-bottom: 30px;
-    max-width: 600px; /* Control line breaks */
-    line-height: 1.1;
-    text-align: left;
     font-weight: 700;
-    color:rgb(11, 86, 32);
+    color: rgb(11, 86, 32);
+    margin-bottom: 20px;
 }
 
 .hero-content h2 {
     font-family: 'Montserrat';
-    color:rgb(11, 86, 32); 
- }
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    max-width: 700px;
+}
+
 .btn-primary {
     display: inline-block;
     background-color: #8bc34a; /* Greenyellow button color */
@@ -167,7 +172,6 @@ body {
     background-color: #689f38; /* Darker green on hover */
 }
 
-/* You'll need to replace 'path/to/your/logo.png', 'path/to/your/search-icon.png', and 'path/to/your/background-image.jpg' with the actual paths to your image files. */
 
 /* Media Queries for Responsiveness (Basic Example) */
 @media (max-width: 992px) {
@@ -253,7 +257,6 @@ body {
 .contact-section h2 {
     text-align: center;
     margin-bottom: 20px;
-    
 }
 
 form {
@@ -287,65 +290,162 @@ form button:hover {
     background-color: #005f46;
 }
 
+
+/* tarjetas*/
+.containertarje {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1100px;
+    margin: 0 auto 60px;
+    padding: 0 20px;
+}
+.card{
+    width: 100%;
+    margin: 20px;
+    border-radius: 6px;
+    overflow: hidden;
+    background: #e2bd86;
+    box-shadow: 0px 1px 10px rgba(0,0,0,0.2);
+    cursor: default;
+    transition: all 400ms ease;
+}
+.card:hover{
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
+    transform: translate(-3%);
+}
+.card img{
+    width: 100;
+    height: 210px;
+}
+.card .contenido{
+    padding: 20px;
+    text-align: center;
+}
+.card .contenido p{
+    line-height: 1.5;
+    color: #000000;
+}
+.card .contenido h3{
+    font-weight: 400;
+    color: #000000;
+    margin-bottom: 15px;
+}
+
+/* mapa*/
+.proyectos-solares {
+    background-color: #f4f4f4;
+    font-family: 'Open Sans', sans-serif;
+    padding: 40px;
+}
+.proyectos-solares h2 {
+    color: #2c7a4b;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 30px;
+    text-align: center;
+}
+.mapa-contenedor {
+    flex-direction: row;
+    gap: 40px;
+    justify-content: center;
+    align-items: flex-start;
+    display: flex;
+}
+.col-mapa img {
+    height: auto;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    max-width: 100%;
+}
+.col-info {
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    background-color: #e2bd86;
+    margin-top: 230px; /* Ajusta esto según tu necesidad visual */
+    height: fit-content;
+}
+
+.zona:hover {
+    cursor: pointer;
+    outline: 3px solid #8bc34a;
+}
+
+
+
+/*GRAFICA*/
+h2 {
+    color: #2c7a4b;
+    text-align: center;
+    }
+    canvas {
+    max-width: 800px;
+    margin: 40px auto;
+    display: block;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
 /* ===== Footer Solary ===== */
 .footer {
-  background-color: #689f38; 
-  color: #ffffff;
-  padding: 40px 20px 20px;
-  height: 40vh;
-  font-family: 'Open Sans', sans-serif;
+    background-color: #689f38; 
+    color: #ffffff;
+    padding: 40px 20px 20px;
+    height: 40vh;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .footer-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 30px;
-  max-width: 1200px;
-  margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .footer-info, .footer-contact, .footer-links {
-  flex: 1 1 250px;
+    flex: 1 1 250px;
 }
 
 .footer h3, .footer h4 {
-  color: #ffffff;
-  margin-bottom: 10px;
+    color: #ffffff;
+    margin-bottom: 10px;
 }
 
 .footer p, .footer a {
-  font-size: 14px;
-  line-height: 1.6;
-  color: #e0f2e9;
-  text-decoration: none;
+font-size: 14px;
+line-height: 1.6;
+color: #e1f1e6;
+text-decoration: none;
 }
 
 .footer a:hover {
-  text-decoration: underline;
-  color: #c0e6cf;
+text-decoration: underline;
+color: #c0e6cf;
 }
 
 .footer-links ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+list-style: none;
+padding: 0;
+margin: 0;
 }
 
 .footer-links li {
-  margin-bottom: 2px;
-  line-height: 2;
-  height: 15px;
-  
+margin-bottom: 2px;
+line-height: 2;
+height: 15px;
+
 }
 
 .footer-bottom {
-  text-align: center;
-  margin-top: 30px;
-  font-size: 13px;
-  border-top: 1px solid #3b8c60;
-  padding-top: 15px;
-  color: #d0f5e0;
+text-align: center;
+margin-top: 30px;
+font-size: 13px;
+border-top: 1px solid #3b8c60;
+padding-top: 15px;
+color: #d0f5e0;
 }
 
 

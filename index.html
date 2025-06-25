@@ -9,10 +9,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
-        html {
-            scroll-behavior: smooth;
-        }
+        html {scroll-behavior: smooth;}
     </style>
 </head>
 <body>
@@ -25,8 +24,7 @@
             <nav class="navbar">
                 <ul>
                     <li><a href="#">Inicio</a></li>
-                    <li><a href="#">Quienes Somos</a></li>
-                    <li><a href="#">Proyectos</a></li>
+                    <li><a href="quienessomos.html">Quienes Somos</a></li>
                     <li><a href="contacto.html">Contáctanos</a></li>
                     <li><a href="pqr.html">PQRS</a></li>
                 </ul>
@@ -36,6 +34,9 @@
     </header>
 
     <main class="hero-section">
+        <div class="hero-background">
+    <img src="imgEsolar/solar.png" alt="Banner Energía Solar">
+        </div>
         <div class="hero-content container">
             <div class="icon-bulb">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -48,11 +49,158 @@
                 </svg>
             </div>
             <h1>SOLARY</h1>
-            <h2><strong>La energía solar: El poder del sol en tus manos,
-                 para un futuro más limpio y brillante</strong></h2><br>
+            <h2><strong>La energía solar: El poder del sol en tus manos, para un futuro más limpio y brillante</strong></h2><br>
             <ali><a href="calculadora.html" class="btn-primary">Calculadora Solary</a></ali>
         </div>
     </main>
+
+        <section class="tipos-energia">
+        <h1 style="text-align: center; color: #2c7a4b; font-family: 'Montserrat', sans-serif; margin: 40px 0 20px;"><b>TIPOS DE ENERGIA SOLAR</b></h1>
+    
+        <div class="containertarje">
+            
+            <div class="card">
+                <figure>
+                    <img src="imgEsolar/hibrida.jpeg">
+                </figure>
+                <div class="contenido">
+                    <h3><b>Energia Hibrida</b></h3>
+                    <p>En Colombia, la energía híbrida está ganando terreno como una opción para la transición energética y la diversificación de la matriz energética. Proyectos como la primera planta híbrida en Bogotá, que combina energía solar fotovoltaica y gas natural, demuestran el interés en este tipo de soluciones. Además, se están implementando sistemas híbridos en zonas no interconectadas, como el proyecto en Cumaribo que utiliza energía solar, baterías y respaldo diéseL</p>
+                </div>
+            </div>
+            <div class="card">
+                <figure>
+                    <img src="imgEsolar/fotovoltaica.jpg">
+                </figure>
+                <div class="contenido">
+                    <h3><b>Energia Fotovoltaica</b></h3>
+                    <p>La energía fotovoltaica en Colombia está experimentando un crecimiento significativo, impulsada por políticas gubernamentales y la creciente conciencia sobre la sostenibilidad. Se espera que la capacidad instalada de energía solar fotovoltaica aumente considerablemente en los próximos años, convirtiéndose en una fuente cada vez más importante de energía en el país. </p>
+                </div>
+            </div>
+            <div class="card">
+                <figure>
+                    <img src="imgEsolar/termica.jpg">
+                </figure>
+                <div class="contenido">
+                    <h3><b>Energia Termica</b></h3>
+                    <p>En Colombia, la energía térmica representa una parte significativa de la matriz energética, complementando la generación hidroeléctrica y garantizando el suministro eléctrico, especialmente en momentos de baja disponibilidad de agua en los embalses. Las plantas termoeléctricas utilizan combustibles como gas natural, carbón y líquidos para generar electricidad, aportando alrededor del 28% de la capacidad instalada total del país. </p>
+                </div>
+            </div>
+        </div>
+        </section>
+
+            <!--MAPA INTERACTIVO-->
+            <section class="proyectos-solares">
+                <div class="mapa-contenedor">
+                    <div class="col-mapa">
+        <h2>Distribución de proyectos de energía solar por departamentos en Colombia</h2>
+        <img src="imgEsolar/mapainteractovo.jpg" usemap="#image-map" alt="Mapa proyectos solares">
+
+        <map name="image-map">
+    <area shape="rect" coords="167,171,181,193" alt="Córdoba" class="zona" data-depto="Córdoba" data-proyectos="63">
+        <area shape="circle" coords="242,310,20" alt="Meta" class="zona" data-depto="Meta" data-proyectos="38">
+        <area shape="circle" coords="230,476,20" alt="Caquetá" class="zona" data-depto="Caquetá" data-proyectos="3">
+        <area shape="circle" coords="377,477,21" alt="Amazonas" class="zona" data-depto="Amazonas" data-proyectos="4">
+        <area shape="rect" coords="374,486,355,461" alt="Vaupés" class="zona" data-depto="Vaupés" data-proyectos="2">
+        <area shape="rect" coords="152,499,171,487" alt="Putumayo" class="zona" data-depto="Putumayo" data-proyectos="4">
+        <area shape="rect" coords="99,466,80,451" alt="Nariño" class="zona" data-depto="Nariño" data-proyectos="2">
+        <area shape="rect" coords="115,421,141,396" alt="Cauca" class="zona" data-depto="Cauca" data-proyectos="11">
+        <area shape="rect" coords="152,363,126,377" alt="Valle del Cauca" class="zona" data-depto="Valle del Cauca" data-proyectos="124">
+        <area shape="circle" coords="211,394,20" alt="Huila" class="zona" data-depto="Huila" data-proyectos="43">
+        <area shape="rect" coords="181,372,209,354" alt="Tolima" class="zona" data-depto="Tolima" data-proyectos="83">
+        <area shape="circle" coords="134,309,15" alt="Chocó" class="zona" data-depto="Chocó" data-proyectos="5">
+        <area shape="rect" coords="159,243,185,264" alt="Antioquia" class="zona" data-depto="Antioquia" data-proyectos="45">
+        <area shape="rect" coords="345,300,301,322" alt="Casanare" class="zona" data-depto="Casanare" data-proyectos="5">
+        <area shape="rect" coords="232,101,218,136" alt="Magdalena" class="zona" data-depto="Magdalena" data-proyectos="19">
+        <area shape="rect" coords="202,160,211,174" alt="Sucre" class="zona" data-depto="Sucre" data-proyectos="21">
+        <area shape="rect" coords="244,307,256,328" alt="Cundinamarca" class="zona" data-depto="Cundinamarca" data-proyectos="71">
+        <area shape="rect" coords="268,102,260,138" alt="Cesar" class="zona" data-depto="Cesar" data-proyectos="58">
+        <area shape="rect" coords="200,94,208,86" alt="Atlántico" class="zona" data-depto="Atlántico" data-proyectos="76">
+        <area shape="rect" coords="282,183,293,206" alt="Norte de Santander" class="zona" data-depto="Norte de Santander" data-proyectos="30">
+        <area shape="rect" coords="306,453,340,417" alt="Guaviare" class="zona" data-depto="Guaviare" data-proyectos="2">
+        <area shape="rect" coords="189,304,180,311" alt="Caldas" class="zona" data-depto="Caldas" data-proyectos="17">
+        <area shape="rect" coords="178,321,172,321" alt="Risaralda" class="zona" data-depto="Risaralda" data-proyectos="26">
+        <area shape="rect" coords="177,336,176,345" alt="Quindío" class="zona" data-depto="Quindío" data-proyectos="3">
+        <area shape="rect" coords="290,65,277,88" alt="La Guajira" class="zona" data-depto="La Guajira" data-proyectos="21">
+        <area shape="rect" coords="238,166,230,207" alt="Bolívar" class="zona" data-depto="Bolívar" data-proyectos="60">
+        <area shape="rect" coords="408,349,461,284" alt="Vichada" class="zona" data-depto="Vichada" data-proyectos="4">
+        </map>
+    </div>
+
+    <div class="col-info" id="info-depto">
+        <p><strong>Departamento:</strong> <span id="nombre-depto">-</span></p>
+        <p><strong>Número de proyectos:</strong> <span id="cantidad-proyectos">-</span></p>
+        <h3>Pasa el cursor sobre un departamento</h3>
+    </div>
+    </div>
+</section>
+
+
+    <!-- GRAFICAS-->
+        <h2 >📈 Implementación de Energía Solar y Reducción de CO₂ en Colombia (2018 - 2025)</h2>
+<canvas id="solarChart" width="1500" height="1100"></canvas>
+
+<script>
+    const ctx = document.getElementById('solarChart').getContext('2d');
+
+    const data = {
+        labels: [2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025],
+        datasets: [
+        {
+        label: 'Capacidad solar instalada (MW)',
+        data: [28, 100, 400, 700, 1625, 1348, 1871, 2047],
+        borderColor: '#f39c12',
+        backgroundColor: '#f39c1266',
+        yAxisID: 'y1',
+        tension: 0.4,
+        fill: true
+        },
+        {
+        label: 'CO₂ evitado (toneladas por año)',
+        data: [0, 50000, 120000, 247845, 400000, 350000, 500000, 550000],
+        borderColor: '#27ae60',
+        backgroundColor: '#27ae6066',
+        yAxisID: 'y2',
+        tension: 0.4,
+        fill: true
+        }
+    ]
+    };
+
+    const config = {
+        type: 'line',
+        data: data,
+        options: {
+        responsive: true,
+        plugins: {
+        legend: { position: 'top' },
+        title: {
+            display: false,
+            text: 'Energía Solar y CO₂ Evitado'
+        }
+        },
+        scales: {
+        y1: {
+            type: 'linear',
+            position: 'left',
+            title: { display: true, text: 'Capacidad (MW)' },
+            beginAtZero: true
+        },
+        y2: {
+            type: 'linear',
+            position: 'right',
+            title: { display: true, text: 'CO₂ evitado (t/año)' },
+            beginAtZero: true,
+            grid: { drawOnChartArea: false }
+        }
+        }
+    }
+    };
+
+    new Chart(ctx, config);
+</script>
+
+    <!--FOOTER-->
     <footer class="footer">
         <div class="footer-container">
         <div class="footer-info">
@@ -84,5 +232,25 @@
 </footer>
 
 <!--  Este es el cierre final del body -->
+
+<!--JS MAPA-->
+<script>
+  const nombreDepto = document.getElementById('nombre-depto');
+  const cantidadProyectos = document.getElementById('cantidad-proyectos');
+  const areas = document.querySelectorAll('area.zona');
+
+  areas.forEach(area => {
+    area.addEventListener('mouseenter', () => {
+      nombreDepto.textContent = area.dataset.depto;
+      cantidadProyectos.textContent = area.dataset.proyectos;
+    });
+
+    area.addEventListener('mouseleave', () => {
+      nombreDepto.textContent = '-';
+      cantidadProyectos.textContent = '-';
+    });
+  });
+</script>
+
 </body>
 </html>

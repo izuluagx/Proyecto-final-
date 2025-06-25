@@ -1,89 +1,234 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Formulario PQR - Solary</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Formulario PQRS - Solary</title>
+  
+  <!-- Fuentes -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+  
   <style>
-    body {
-      font-family: 'Open Sans', sans-serif;
-      background-color: #f1f5f3;
+    * {
       margin: 0;
       padding: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
+      box-sizing: border-box;
     }
 
-    .form-container {
-      background-color: #ffffff;
-      padding: 30px 40px;
-      border-radius: 10px;
-      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-      max-width: 600px;
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background-image: url(imgEsolar/diasoleado.jpg);
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      color: #333;
+    }
+
+    /* ===== HEADER / MENÚ ===== */
+    .header {
+      background-color: rgba(0, 0, 0, 0.6);
+      color: #fff;
+      padding: 10px 20px;
+      position: absolute;
+      top: 0;
       width: 100%;
+      z-index: 1000;
+    }
+
+    .header-container {
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 24px;
+      color: #8bc34a;
+    }
+
+    .logo img {
+      height: 60px;
+      margin-right: 10px;
+    }
+
+    .navbar ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    .navbar a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 400;
+      transition: color 0.3s ease;
+    }
+
+    .navbar a:hover {
+      color: #8bc34a;
+    }
+
+    /* ===== FORMULARIO PQRS ===== */
+    .form-container {
+      max-width: 700px;
+      margin: 140px auto 60px;
+      background-color: rgba(255, 255, 255, 0.95);
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
     }
 
     .form-container h2 {
       text-align: center;
+      font-family: 'Montserrat', sans-serif;
+      margin-bottom: 20px;
       color: #2c7a4b;
-      margin-bottom: 25px;
     }
 
-    label {
-      font-weight: bold;
+    form label {
       display: block;
-      margin-top: 15px;
-      color: #333;
+      margin: 10px 0 5px;
+      font-weight: 600;
     }
 
-    input[type="text"],
-    input[type="email"],
-    input[type="tel"],
-    input[type="file"],
-    select,
-    textarea {
+    form input, form select, form textarea {
       width: 100%;
       padding: 10px;
-      margin-top: 5px;
-      border-radius: 5px;
       border: 1px solid #ccc;
-      box-sizing: border-box;
+      border-radius: 6px;
+      margin-bottom: 15px;
+      font-family: 'Open Sans', sans-serif;
     }
 
-    textarea {
-      resize: vertical;
-    }
-
-    input[type="checkbox"] {
+    form input[type="checkbox"] {
+      width: auto;
       margin-right: 10px;
     }
 
-    button {
-      background-color: #2c7a4b;
+    form button {
+      display: block;
+      width: 100%;
+      padding: 12px;
+      background-color: #8bc34a;
       color: white;
       border: none;
-      padding: 12px;
+      border-radius: 6px;
+      font-weight: bold;
       font-size: 16px;
-      border-radius: 5px;
       cursor: pointer;
-      margin-top: 20px;
-      width: 100%;
       transition: background-color 0.3s ease;
     }
 
-    button:hover {
-      background-color: #25693e;
+    form button:hover {
+      background-color: #689f38;
     }
 
-    a {
-      color: #2c7a4b;
+    /* ===== FOOTER ===== */
+    .footer {
+      background-color: #689f38;
+      color: #ffffff;
+      padding: 40px 20px 20px;
+      font-family: 'Open Sans', sans-serif;
+    }
+
+    .footer-container {
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: space-between;
+    }
+
+    .footer-info, .footer-contact, .footer-links {
+      flex: 1 1 250px;
+    }
+
+    .footer h3, .footer h4 {
+      margin-bottom: 10px;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    .footer p, .footer a {
+      font-size: 14px;
+      line-height: 1.6;
+      color: #e1f1e6;
+      text-decoration: none;
+    }
+
+    .footer a:hover {
+      text-decoration: underline;
+      color: #c0e6cf;
+    }
+
+    .footer-links ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .footer-links li {
+      margin-bottom: 5px;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      margin-top: 30px;
+      font-size: 13px;
+      border-top: 1px solid #3b8c60;
+      padding-top: 15px;
+      color: #d0f5e0;
+    }
+
+    @media (max-width: 768px) {
+      .header-container {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .navbar ul {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .form-container {
+        margin: 160px 20px 60px;
+      }
     }
   </style>
 </head>
+
 <body>
 
+  <!-- ===== MENÚ SUPERIOR ===== -->
+  <header class="header">
+    <div class="header-container">
+      <div class="logo">
+        <img src="imgEsolar/LogoSoralysinFondo.png" alt="Logo Solary">
+        SOLARY
+      </div>
+      <nav class="navbar">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="#">Quienes Somos</a></li>
+          <li><a href="contacto.html">Contáctanos</a></li>
+          <li><a href="pqr.html">PQRS</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===== FORMULARIO PQRS ===== -->
   <div class="form-container">
     <form id="formPQR" action="#" method="GET" enctype="multipart/form-data">
       <h2>Formulario de PQR</h2>
@@ -138,6 +283,35 @@
     </form>
   </div>
 
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-info">
+        <h3>Solary</h3>
+        <p>Transformamos la energía del sol en un futuro sostenible para Medellín y Colombia.</p>
+      </div>
+      <div class="footer-contact">
+        <h4>Contacto</h4>
+        <p><strong>Dirección:</strong> Calle 50 #40-60, Medellín, Colombia</p>
+        <p><strong>Email:</strong> contacto@solary.com</p>
+        <p><strong>Teléfono:</strong> +57 300 123 4567</p>
+      </div>
+      <div class="footer-links">
+        <h4>Enlaces rápidos</h4>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="#">Proyectos</a></li>
+          <li><a href="contacto.html">Contáctanos</a></li>
+          <li><a href="pqr.html">PQRS</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Solary. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- ===== JS PARA MENSAJE DE ENVÍO ===== -->
   <script>
     document.getElementById("formPQR").addEventListener("submit", function(e) {
       e.preventDefault();
@@ -145,6 +319,5 @@
       window.location.href = "index.html";
     });
   </script>
-
 </body>
 </html>
